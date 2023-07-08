@@ -1,6 +1,7 @@
 {
   "tools": {
     "rabbitmq": "https://github.com/zhound420/rabbitmq",
-    "GreetingTool": "https://github.com/luciferlinx101/GreetingTool"
+    "GreetingTool": "https://github.com/luciferlinx101/GreetingTool",
+    "FinnhubSuperAgi": "https://github.com/neph1/FinnhubSuperAgi"
   }
 }
