@@ -1,4 +1,3 @@
-from abc import ABC
 from typing import List
 from superagi.tools.base_tool import BaseTool
 import pika
@@ -8,7 +7,7 @@ import datetime
 import json
 from rabbitmq_connection import RabbitMQConnection
 
-class RabbitMQTool(BaseTool, ABC):
+class RabbitMQTool(BaseTool):
     name = "RabbitMQ Tool"
     description = "A tool for interacting with RabbitMQ"
 
@@ -21,7 +20,11 @@ class RabbitMQTool(BaseTool, ABC):
             credentials=pika.PlainCredentials(self.rabbitmq_username, self.rabbitmq_password)
         )
         self.logger = logging.getLogger(__name__)
-
+    
+    def _execute(self, action, parameters):
+        # Provide a concrete implementation of the _execute method.
+        pass
+    
     def execute(self, action, queue_name, message=None, persistent=False, priority=0, callback=None, consumer_tag=None, delivery_tag=None):
         """
         Execute a RabbitMQ operation.
