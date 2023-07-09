@@ -8,7 +8,7 @@ import json
 from rabbitmq_connection import RabbitMQConnection
 from pydantic import BaseModel
 
-class RabbitMQTool(BaseModel):
+class RabbitMQTool(BaseModel, BaseTool):  # Make sure RabbitMQTool also inherits from BaseTool
     name = "RabbitMQ Tool"
     description = "A tool for interacting with RabbitMQ"
     rabbitmq_server: str
