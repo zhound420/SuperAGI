@@ -1,8 +1,13 @@
 from abc import ABC
 from typing import List
+<<<<<<< HEAD
 
 from superagi.tools.base_tool import BaseTool, BaseToolkit
 from rabbitmq_tool import RabbitMQTool
+=======
+from superagi.tools.base_tool import BaseTool, BaseToolkit
+from superagi.tools.rabbitmq.rabbitmq_tool import RabbitMQTool
+>>>>>>> a0b5b9ad09dbd8be0f2c094aae5dc8759bd5272e
 
 class RabbitMQToolkit(BaseToolkit, ABC):
     name: str = "RabbitMQ Toolkit"
